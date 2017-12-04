@@ -4,4 +4,166 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 	<display-name>Archetype Created Web Application</display-name>
+	
+	<filter>
+		<filter-name>AuthFilter</filter-name>
+		<filter-class>my.lev.filters.AuthFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AuthFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>RoleFilter</filter-name>
+		<filter-class>my.lev.filters.RoleFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>RoleFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>authcheck</servlet-name>
+		<servlet-class>my.lev.authcheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>authcheck</servlet-name>
+		<url-pattern>/authcheck</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>regcheck</servlet-name>
+		<servlet-class>my.lev.regcheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>regcheck</servlet-name>
+		<url-pattern>/regcheck</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>testcheck</servlet-name>
+		<servlet-class>my.lev.testcheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testcheck</servlet-name>
+		<url-pattern>/testcheck</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>vortoj</servlet-name>
+		<servlet-class>my.lev.vortoj</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vortoj</servlet-name>
+		<url-pattern>/vortoj</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ddd</servlet-name>
+		<servlet-class>my.lev.ddd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ddd</servlet-name>
+		<url-pattern>/testing</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	<servlet>
+	    <servlet-name>auth</servlet-name>
+	    <jsp-file>/auth.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>auth</servlet-name>
+	    <url-pattern>/auth</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>main</servlet-name>
+	    <jsp-file>/main.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>main</servlet-name>
+	    <url-pattern>/main</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>error</servlet-name>
+	    <jsp-file>/error.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>error</servlet-name>
+	    <url-pattern>/error</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>AdminForm</servlet-name>
+		<servlet-class>my.lev.AdminForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminForm</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>learningWords</servlet-name>
+		<servlet-class>my.lev.learningWords</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>learningWords</servlet-name>
+		<url-pattern>/lw</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>startLearningWords</servlet-name>
+		<servlet-class>my.lev.startLearningWords</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>startLearningWords</servlet-name>
+		<url-pattern>/slw</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UserPage</servlet-name>
+		<servlet-class>my.lev.UserPage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserPage</servlet-name>
+		<url-pattern>/user</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ModerForm</servlet-name>
+		<servlet-class>my.lev.ModerForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModerForm</servlet-name>
+		<url-pattern>/moder</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Chislit</servlet-name>
+		<servlet-class>my.lev.Chislit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Chislit</servlet-name>
+		<url-pattern>/chisl</url-pattern>
+	</servlet-mapping>
+	
 </web-app>
